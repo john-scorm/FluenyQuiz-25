@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="AdfoVu4Fd1MHs" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        <lom:lom>
+            <lom:general>
+                <lom:title>
+                    <lom:langstring>quiz1</lom:langstring>
+                </lom:title>
+            </lom:general>
+            <lom:educational>
+                <lom:typicallearningtime>
+                <lom:datetime>01:00:00</lom:datetime>
+                </lom:typicallearningtime>
+            </lom:educational>
+        </lom:lom>
+    </metadata>
+    <organizations default="quiz1_organization">
+        <organization identifier="quiz1_organization">
+
+            <title>quiz1</title>
+            <item identifier="BECCB4D6-F89B-4A2E-A655-6D8A5802827B" identifierref="resource">
+                <title>Untitled Quiz</title>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="resource" type="webcontent" adlcp:scormtype="sco" href="res/index.html">
+            <file href="res/public/audioicon.svg"/>
+            <file href="res/public/quiz.json"/>
+            <file href="res/index.js"/>
+            <file href="res/index.html"/>
+            
+        </resource>
+    </resources>
+</manifest>
