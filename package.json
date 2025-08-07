@@ -13,6 +13,9 @@
     "verify": "yarn prettier && yarn lint",
     "verify:fix": "yarn prettier:fix && yarn lint:fix"
   },
+  "engines": {
+  "node": "22.x"
+  },
   "dependencies": {
     "@google-cloud/shell": "^2.0.4",
     "@google-cloud/storage": "^6.9.0",
