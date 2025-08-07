@@ -1,3 +1,4 @@
+import React from 'react';
 /*
 import AuthChecker from 'components/AuthChecker'
 import Layout from 'components/Layout'
