@@ -50,8 +50,7 @@ const UploadModal = ({
         <button
           type="button"
           className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          onClick={() => setOpen(false)}
-        >
+          onClick={() => setOpen(false)}>
           <span className="sr-only">Close</span>
           <XIcon className="h-6 w-6" aria-hidden="true" />
         </button>
@@ -64,8 +63,7 @@ const UploadModal = ({
         <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
           <Dialog.Title
             as="h3"
-            className="text-lg leading-6 font-medium text-gray-900"
-          >
+            className="text-lg leading-6 font-medium text-gray-900">
             Upload {type}
           </Dialog.Title>
 
@@ -113,8 +111,7 @@ const UploadModal = ({
             onClick={handleUpload}
             disabled={isLoading || !file}
             type="button"
-            className="disabled:opacity-75 disabled:cursor-not-allowed w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white not-disabled:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm"
-          >
+            className="disabled:opacity-75 disabled:cursor-not-allowed w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white not-disabled:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm">
             Upload File
           </button>
 
@@ -122,8 +119,7 @@ const UploadModal = ({
             disabled={!selectedFile || isLoading}
             type="button"
             className="disabled:opacity-75 disabled:cursor-not-allowed w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white not-disabled:hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:w-auto sm:text-sm"
-            onClick={() => onRemove()}
-          >
+            onClick={() => onRemove()}>
             Remove File
           </button>
         </div>
@@ -131,8 +127,7 @@ const UploadModal = ({
         <button
           type="button"
           className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
-          onClick={() => setOpen(false)}
-        >
+          onClick={() => setOpen(false)}>
           Done
         </button>
       </div>
@@ -152,8 +147,7 @@ const UploadModalWrapper = ({
       <Dialog
         as="div"
         className="fixed z-10 inset-0 overflow-y-auto"
-        onClose={() => {}}
-      >
+        onClose={() => {}}>
         <div className="relative flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
@@ -162,8 +156,7 @@ const UploadModalWrapper = ({
             enterTo="opacity-100"
             leave="ease-in duration-200"
             leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
+            leaveTo="opacity-0">
             <Dialog.Overlay className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
@@ -174,8 +167,7 @@ const UploadModalWrapper = ({
             enterTo="opacity-100 sm:scale-100"
             leave="ease-in duration-200"
             leaveFrom="opacity-100 sm:scale-100"
-            leaveTo="opacity-0 sm:scale-95"
-          >
+            leaveTo="opacity-0 sm:scale-95">
             <div className="absolute top-1/2 left-1/2 -translate-1/2 inline-block bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
               <UploadModal setOpen={setOpen} {...props} />
             </div>

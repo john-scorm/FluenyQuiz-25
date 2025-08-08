@@ -53,8 +53,7 @@ const HomePage = () => {
         <Link href="/edit-quiz">
           <a
             href="edit-quiz"
-            className="text-sm text-white rounded shadow bg-indigo-500 px-2 py-1.5 flex items-center"
-          >
+            className="text-sm text-white rounded shadow bg-indigo-500 px-2 py-1.5 flex items-center">
             <span className="mr-2">
               <PlusIcon className="h-4 w-4" />
             </span>
@@ -71,8 +70,7 @@ const HomePage = () => {
             return (
               <div
                 key={quiz.id}
-                className="rounded border border-gray-200 px-3 py-2"
-              >
+                className="rounded border border-gray-200 px-3 py-2">
                 <div className="flex flex-col md:flex-row items-center mb-1">
                   <h3 className="flex-1 truncate mb-1 md:mb-0">{quiz.title}</h3>
 
@@ -81,8 +79,7 @@ const HomePage = () => {
                       className="flex items-center rounded text-white bg-teal-600 hover:bg-teal-700 shadow px-2 py-1"
                       onClick={() => {
                         router.push(`/result/${quiz.id}`)
-                      }}
-                    >
+                      }}>
                       <IdentificationIcon className="w-4 h-4" />
                       <span className="ml-1">Result</span>
                     </button>
@@ -101,8 +98,7 @@ const HomePage = () => {
                     </button> */}
                     <button
                       className="flex items-center rounded text-white bg-indigo-600 hover:bg-indigo-700 shadow px-2 py-1"
-                      onClick={() => router.push(`edit-quiz/${quiz.id}`)}
-                    >
+                      onClick={() => router.push(`edit-quiz/${quiz.id}`)}>
                       <PencilIcon className="w-4 h-4" />
                       <span className="ml-1">Edit</span>
                     </button>
@@ -114,8 +110,7 @@ const HomePage = () => {
                           success: 'Downloaded quiz',
                           error: 'An error occurred'
                         })
-                      }}
-                    >
+                      }}>
                       <DownloadIcon className="w-4 h-4" />
                       <span className="ml-1">Download</span>
                     </button>
@@ -127,8 +122,7 @@ const HomePage = () => {
                           success: 'Duplicated quiz',
                           error: 'An error occurred'
                         })
-                      }}
-                    >
+                      }}>
                       <ClipboardCopyIcon className="w-4 h-4" />
                       <span className="ml-1">Duplicate</span>
                     </button>
@@ -142,8 +136,7 @@ const HomePage = () => {
                           },
                           error: 'An error occurred'
                         })
-                      }}
-                    >
+                      }}>
                       <TrashIcon className="w-4 h-4" />
                       <span className="ml-1">Delete</span>
                     </button>

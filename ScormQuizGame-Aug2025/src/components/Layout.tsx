@@ -23,8 +23,7 @@ const Layout = ({
           'flex-1 flex flex-col w-full mx-auto px-2 sm:px-6 lg:px-8',
           !fullWidth && 'max-w-7xl',
           className
-        )}
-      >
+        )}>
         {children}
       </div>
     </div>

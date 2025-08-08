@@ -106,8 +106,7 @@ const QuizSubmissions = () => {
             <Link href="/">
               <a
                 href="/"
-                className="hover:underline text-blue-500 hover:text-blue-600"
-              >
+                className="hover:underline text-blue-500 hover:text-blue-600">
                 &larr; Back to all quizzes
               </a>
             </Link>
@@ -119,8 +118,7 @@ const QuizSubmissions = () => {
             <button
               className="rounded px-3 py-2 ml-auto bg-indigo-500 text-white not-disabled:hover:bg-indigo-600 disabled:opacity-75 transition"
               disabled={csvLoading}
-              onClick={downloadCsv}
-            >
+              onClick={downloadCsv}>
               Download as CSV
             </button>
           </div>

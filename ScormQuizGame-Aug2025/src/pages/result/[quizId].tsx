@@ -35,8 +35,7 @@ const Result = () => {
           return (
             <div
               key={key}
-              className="rounded flex flex-wrap gap-3 border border-gray-200 px-3 py-3 m-2"
-            >
+              className="rounded flex flex-wrap gap-3 border border-gray-200 px-3 py-3 m-2">
               <div className="bg-gray-200 py-2 px-4 rounded flex flex-col items-start justify-center">
                 {data[key].title}
                 <div className="text-xs">
@@ -47,8 +46,7 @@ const Result = () => {
                 className={tw(
                   data[key].passed ? 'bg-green-400' : 'bg-red-400',
                   'py-2 px-4 rounded flex items-center'
-                )}
-              >
+                )}>
                 Percentage: {data[key].percentage}
               </div>
               <div className="bg-blue-200 py-2 px-4 rounded flex items-center">
