@@ -190,7 +190,8 @@ const TakeQuiz = () => {
             className={classNames(
               'px-3 py-2 rounded mx-auto text-white',
               passed ? 'bg-green-600' : 'bg-red-500'
-            )}>
+            )}
+          >
             {passed ? 'You passed!' : 'You failed'}
           </div>
 
@@ -208,7 +209,8 @@ const TakeQuiz = () => {
                 setQuestionIdx(0)
                 setSubmissionData({ submission: null })
                 timer.reset()
-              }}>
+              }}
+            >
               Retake quiz
             </button>
           </div>
@@ -234,7 +236,8 @@ const TakeQuiz = () => {
             setQuizStarted(true)
             timer.reset()
             if (quiz.maxTime) timer.start()
-          }}>
+          }}
+        >
           <InvisibleInput
             value={userData.name}
             onChange={(e) => {
@@ -272,7 +275,8 @@ const TakeQuiz = () => {
           <div className="flex">
             <button
               disabled={!resourcesLoaded}
-              className="w-full text-center mx-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              className="w-full text-center mx-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
               Start quiz
             </button>
           </div>
@@ -304,7 +308,8 @@ const TakeQuiz = () => {
         backgroundColor: quiz.backgroundColor,
         userSelect: isTimeUp ? 'none' : undefined,
         cursor: isTimeUp ? 'wait' : undefined
-      }}>
+      }}
+    >
       <div className="flex-1 max-w-7xl w-full max-h-screen mx-auto flex flex-col">
         {quiz.maxTime && (
           <div className="flex items-center space-x-4 mb-6 mt-4">
@@ -336,7 +341,8 @@ const TakeQuiz = () => {
                       if (!audioRef.current) return
                       audioRef.current.currentTime = 0
                       audioRef.current.play()
-                    }}>
+                    }}
+                  >
                     <VolumeUpIcon
                       className={classNames(
                         'h-5 w-5',
@@ -356,7 +362,8 @@ const TakeQuiz = () => {
                       className={classNames(
                         'max-h-full max-w-full min-w-full min-h-full flex-1 cursor-pointer flex relative'
                       )}
-                      onClick={() => onSelectAnswer(answer.idx, question.id)}>
+                      onClick={() => onSelectAnswer(answer.idx, question.id)}
+                    >
                       {answer.imageUrl && (
                         <img
                           src={resourcesCache[answer.imageUrl]}
@@ -372,7 +379,8 @@ const TakeQuiz = () => {
                             answer.imageUrl
                               ? 'absolute top-0 -translate-y-3 rounded bg-white'
                               : 'my-auto'
-                          )}>
+                          )}
+                        >
                           {answer.title}
                         </div>
                       )}

@@ -39,7 +39,8 @@ const Navbar = () => {
                     <Link href="/">
                       <a
                         href="/"
-                        className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 text-sm font-medium">
+                        className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 text-sm font-medium"
+                      >
                         My quizzes
                       </a>
                     </Link>
@@ -51,14 +52,16 @@ const Navbar = () => {
                 {user ? (
                   <button
                     className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    onClick={() => signOut(auth)}>
+                    onClick={() => signOut(auth)}
+                  >
                     Logout
                   </button>
                 ) : (
                   <Link href="/">
                     <a
                       href="/"
-                      className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
                       Login
                     </a>
                   </Link>
@@ -73,14 +76,16 @@ const Navbar = () => {
                 <Disclosure.Button
                   as="button"
                   className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                  onClick={() => signOut(auth)}>
+                  onClick={() => signOut(auth)}
+                >
                   Logout
                 </Disclosure.Button>
               ) : (
                 <Disclosure.Button as={Link} href="/">
                   <a
                     href="/"
-                    className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                  >
                     Login
                   </a>
                 </Disclosure.Button>

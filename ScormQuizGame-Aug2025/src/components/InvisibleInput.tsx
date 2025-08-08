@@ -27,11 +27,8 @@ const InvisibleInput = ({
       {label && (
         <label
           htmlFor={props.id}
-          className={classNames(
-            'mr-2',
-            hideLabel && 'sr-only',
-            labelClassName
-          )}>
+          className={classNames('mr-2', hideLabel && 'sr-only', labelClassName)}
+        >
           {label}
         </label>
       )}

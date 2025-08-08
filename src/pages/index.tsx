@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 /*
 import AuthChecker from 'components/AuthChecker'
 import Layout from 'components/Layout'
@@ -175,7 +175,7 @@ const HomePage = () => {
       <h1>SCORM App Deployed ✅</h1>
       <p>If you’re seeing this, routing and Firebase setup are good.</p>
     </main>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

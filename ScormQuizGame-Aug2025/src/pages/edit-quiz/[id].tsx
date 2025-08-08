@@ -60,7 +60,8 @@ const QuestionCard = ({
         <button
           className="p-2 rounded-md hover:bg-gray-100"
           title="Remove question"
-          onClick={deleteQues}>
+          onClick={deleteQues}
+        >
           <XIcon className="w-4 h-4" />
         </button>
 
@@ -81,13 +82,15 @@ const QuestionCard = ({
         <button
           onClick={duplicateQues}
           title="Duplicate question"
-          className="inline-flex items-center p-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white hover:shadow transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          className="inline-flex items-center p-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white hover:shadow transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
           <DuplicateIcon className="w-4 h-4 text-gray-700" />
         </button>
 
         <button
           className="max-w-[30%] truncate px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          onClick={() => onClickUpload(`audio-question-${qIdx}`)}>
+          onClick={() => onClickUpload(`audio-question-${qIdx}`)}
+        >
           {question.audioUrl ? audioName : 'Upload Audio'}
         </button>
       </div>
@@ -127,7 +130,8 @@ const QuestionCard = ({
 
               <button
                 className="max-w-[30%] truncate px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                onClick={() => onClickUpload(`image-answer-${qIdx}-${idx}`)}>
+                onClick={() => onClickUpload(`image-answer-${qIdx}-${idx}`)}
+              >
                 {answer.imageUrl ? imageName : 'Upload Image'}
               </button>
             </div>
@@ -318,7 +322,8 @@ const EditQuiz = () => {
 
         <button
           className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          onClick={() => setShowTimer((val) => !val)}>
+          onClick={() => setShowTimer((val) => !val)}
+        >
           {quiz.maxTime
             ? `${quiz.maxTime.minutes}m ${quiz.maxTime.seconds}s max time`
             : 'Set timer'}
@@ -327,7 +332,8 @@ const EditQuiz = () => {
         <div
           className="inline-flex relative items-center border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           onClick={() => setShowPicker(true)}
-          onBlur={() => setShowPicker(false)}>
+          onBlur={() => setShowPicker(false)}
+        >
           <div
             className="h-full w-16 rounded-md"
             style={{ backgroundColor: quiz.backgroundColor }}
@@ -346,7 +352,8 @@ const EditQuiz = () => {
 
         <button
           className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-          onClick={handleSaveQuiz}>
+          onClick={handleSaveQuiz}
+        >
           Save quiz
         </button>
       </div>
@@ -362,7 +369,8 @@ const EditQuiz = () => {
 
           <button
             className="flex items-center ml-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-            onClick={() => updateQuiz({ maxTime: null })}>
+            onClick={() => updateQuiz({ maxTime: null })}
+          >
             Remove timer
           </button>
         </div>
@@ -431,7 +439,8 @@ const EditQuiz = () => {
           updateQuiz((quiz) => ({
             questions: [...quiz.questions, getDefaultQuestion()]
           }))
-        }}>
+        }}
+      >
         <PlusIcon className="h-4 w-4 mr-2" />
         <span>Add question</span>
       </button>
